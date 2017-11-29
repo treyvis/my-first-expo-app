@@ -30,9 +30,6 @@ export default class HomeScreen extends React.Component {
               }
               style={styles.welcomeImage}
             />
-            <Image
-            source={'https://cdn.pixabay.com/photo/2017/11/23/15/14/pasta-2973006_1280.jpg'}
-            style={styles.welcomeImage} />
           </View>
 
           <View style={styles.getStartedContainer}>
