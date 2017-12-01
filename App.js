@@ -9,6 +9,12 @@ export default class App extends React.Component {
     isLoadingComplete: false,
   };
 
+  componentWillMount() {
+    Font.loadAsync({
+      'poppins-black': require('./assets/fonts/Poppins-Bold.ttf'),
+    });
+  }
+
   render() {
     if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
       return (
