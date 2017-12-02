@@ -20,7 +20,10 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>Your Studies</Text>
+        <Text style={styles.header}>Your Studies</Text>
+        <View style={styles.studyContainer}>
+          <Text style={styles.studyHeader}>This is my study box</Text>
+        </View>
       </View>
     );
   }
@@ -34,8 +37,22 @@ const styles = StyleSheet.create({
     paddingLeft: 28,
     paddingRight: 28
   },
-  text: {
+  header: {
     fontFamily: 'poppins-black',
     fontSize: 32
+  },
+  studyContainer: {
+    backgroundColor: '#fff',
+    borderWidth: 5,
+    borderRadius: 5,
+    borderColor: '#fff',
+    shadowColor: '#000',
+    shadowOffset: { width: 2, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+  },
+  studyHeader: {
+    fontSize: 28,
+    fontFamily: 'poppins-black'
   }
 });
