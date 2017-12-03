@@ -10,7 +10,7 @@ import {
 } from 'react-native'
 
 
-export default class Study extends Component {
+export default class StudySubmit extends Component {
   render() {
     return (
       <View
@@ -63,10 +63,10 @@ export default class Study extends Component {
         <View
           style={{
             flex: 1,
-            height: 2,
+            height: 4,
             justifyContent: 'flex-start',
             alignItems: 'stretch',
-            backgroundColor: "rgba(233,233,233,1)",
+            backgroundColor: "rgba(41,208,156,1)",
             marginBottom: 24,
           }}>
         </View>
@@ -74,7 +74,7 @@ export default class Study extends Component {
           style={{
             flex: 1,
             height: 40,
-            backgroundColor: 'rgba(67,144,252,1)',
+            backgroundColor: 'rgba(41,208,156,1)',
             borderRadius: 24,
             padding: 6
           }}>
@@ -85,7 +85,7 @@ export default class Study extends Component {
               fontFamily: 'poppins-black',
               fontSize: 16
             }}>
-            Start study
+            Submit for review
             </Text>
         </View>
       </View>
