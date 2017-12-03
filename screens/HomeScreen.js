@@ -9,6 +9,7 @@ import {
   View,
 } from 'react-native';
 import { WebBrowser } from 'expo';
+import Studies from '../views/Studies.js';
 
 import { MonoText } from '../components/StyledText';
 
@@ -19,13 +20,31 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.header}>Your Studies</Text>
-        <View style={styles.studyContainer}>
-          <Text style={styles.studyHeader}>This is my study box</Text>
-        </View>
-      </View>
-    );
+      <Studies
+        studies={[{
+          title: 'Managing tax clientele efficiently',
+          questions: 6,
+          expires: 'Nov 5, 2017',
+          cost: 125
+        },{
+          title: 'Managing tax clientele efficiently',
+          questions: 6,
+          expires: 'Nov 5, 2017',
+          cost: 125
+        },{
+          title: 'Managing tax clientele efficiently',
+          questions: 6,
+          expires: 'Nov 5, 2017',
+          cost: 125
+        },{
+          title: 'Managing tax clientele efficiently',
+          questions: 6,
+          expires: 'Nov 5, 2017',
+          cost: 125
+        }]}
+      >
+      </Studies>
+    )
   }
 }
 
@@ -43,7 +62,6 @@ const styles = StyleSheet.create({
   },
   studyContainer: {
     backgroundColor: '#fff',
-    flex: 1,
     borderWidth: 5,
     borderRadius: 5,
     borderColor: '#fff',
