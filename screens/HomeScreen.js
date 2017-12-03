@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
   },
   studyContainer: {
     backgroundColor: '#fff',
+    flex: 1,
     borderWidth: 5,
     borderRadius: 5,
     borderColor: '#fff',
