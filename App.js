@@ -1,7 +1,8 @@
 import React from 'react';
-import { Platform, StatusBar, StyleSheet, View } from 'react-native';
+import { Platform, StatusBar, StyleSheet, View, Text, Image } from 'react-native';
 import { AppLoading, Asset, Font } from 'expo';
 import { Ionicons } from '@expo/vector-icons';
+import HomeScreen from './screens/HomeScreen.js';
 import RootNavigation from './navigation/RootNavigation';
 
 export default class App extends React.Component {
@@ -27,9 +28,47 @@ export default class App extends React.Component {
     } else {
       return (
         <View style={styles.container}>
-          {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-          {Platform.OS === 'android' && <View style={styles.statusBarUnderlay} />}
-          <RootNavigation />
+          <HomeScreen />
+          <View style={{
+            height: 72,
+            shadowColor: '#E9E9E9',
+            shadowOffset: {
+              width:0, height: -1
+            },
+            shadowRadius: 0,
+            shadowOpacity: 1,
+            flexWrap: 'wrap', 
+            alignItems: 'flex-start',
+            flexDirection: 'row'
+          }}>
+          <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', height: 72}}>
+          <Image 
+            source={require('./assets/images/studies-active.png')}
+            style={{
+              height: 40,
+              width: 40
+            }}
+          />
+          </View>
+          <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', height: 72}}>
+          <Image 
+            source={require('./assets/images/cash-out.png')}
+            style={{
+              height: 40,
+              width: 40
+            }}
+          />
+          </View>
+          <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', height: 72}}>
+          <Image 
+            source={require('./assets/images/profile.png')}
+            style={{
+              height: 40,
+              width: 40
+            }}
+          />
+          </View>
+          </View>
         </View>
       );
     }

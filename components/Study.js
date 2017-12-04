@@ -60,34 +60,75 @@ export default class Study extends Component {
           }}>
           ${this.props.cost}
         </Text>
-        <View
-          style={{
-            flex: 1,
-            height: 2,
-            justifyContent: 'flex-start',
-            alignItems: 'stretch',
-            backgroundColor: "rgba(233,233,233,1)",
-            marginBottom: 24,
-          }}>
-        </View>
-        <View
-          style={{
-            flex: 1,
-            height: 40,
-            backgroundColor: 'rgba(67,144,252,1)',
-            borderRadius: 24,
-            padding: 6
-          }}>
-          <Text
+        {(() => {
+          if (this.props.submit) {
+          return (
+            <View>
+            <View
             style={{
-              color: 'rgba(255,255,255,1)',
-              textAlign: 'center',
-              fontFamily: 'poppins-black',
-              fontSize: 16
+              flex: 1,
+              height: 4,
+              justifyContent: 'flex-start',
+              alignItems: 'stretch',
+              backgroundColor: "rgba(41,208,156,1)",
+              marginBottom: 24,
             }}>
-            Start study
-            </Text>
-        </View>
+            </View>
+            <View
+              style={{
+                flex: 1,
+                height: 40,
+                backgroundColor: 'rgba(41,208,156,1)',
+                borderRadius: 24,
+                padding: 6
+              }}>
+              <Text
+                style={{
+                  color: 'rgba(255,255,255,1)',
+                  textAlign: 'center',
+                  fontFamily: 'poppins-black',
+                  fontSize: 16
+                }}>
+                Submit for review
+                </Text>
+            </View>
+            </View>
+          );
+          } else {
+            return (
+              <View>
+                <View
+                  style={{
+                    flex: 1,
+                    height: 2,
+                    justifyContent: 'flex-start',
+                    alignItems: 'stretch',
+                    backgroundColor: "rgba(233,233,233,1)",
+                    marginBottom: 24,
+                  }}>
+                </View>
+                <View
+                  style={{
+                    flex: 1,
+                    height: 40,
+                    backgroundColor: 'rgba(67,144,252,1)',
+                    borderRadius: 24,
+                    padding: 6
+                  }}>
+                  <Text
+                    style={{
+                      color: 'rgba(255,255,255,1)',
+                      textAlign: 'center',
+                      fontFamily: 'poppins-black',
+                      fontSize: 16
+                    }}>
+                    Start study
+                    </Text>
+                </View>
+              </View>
+            );
+          }
+          })()}
       </View>
     )
   }

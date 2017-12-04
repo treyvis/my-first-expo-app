@@ -25,7 +25,8 @@ export default class HomeScreen extends React.Component {
           title: 'Managing tax clientele efficiently',
           questions: 6,
           expires: 'Nov 5, 2017',
-          cost: 125
+          cost: 125,
+          submit: true
         },{
           title: 'Managing tax clientele efficiently',
           questions: 6,
@@ -35,7 +36,8 @@ export default class HomeScreen extends React.Component {
           title: 'Managing tax clientele efficiently',
           questions: 6,
           expires: 'Nov 5, 2017',
-          cost: 125
+          cost: 125,
+          submit: true
         },{
           title: 'Managing tax clientele efficiently',
           questions: 6,
