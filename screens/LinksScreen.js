@@ -9,41 +9,18 @@ import {
   View,
 } from 'react-native';
 import { WebBrowser } from 'expo';
-import StudiesSubmit from '../views/StudiesSubmit.js';
+import Questions from '../views/Questions.js';
 
 import { MonoText } from '../components/StyledText';
 
-export default class HomeScreen extends React.Component {
+export default class LinksScreen extends React.Component {
   static navigationOptions = {
     header: null,
   };
 
   render() {
     return (
-      <StudiesSubmit
-        studies={[{
-          title: 'Managing tax clientele efficiently',
-          questions: 6,
-          expires: 'Nov 5, 2017',
-          cost: 125
-        },{
-          title: 'Managing tax clientele efficiently',
-          questions: 6,
-          expires: 'Nov 5, 2017',
-          cost: 125
-        },{
-          title: 'Managing tax clientele efficiently',
-          questions: 6,
-          expires: 'Nov 5, 2017',
-          cost: 125
-        },{
-          title: 'Managing tax clientele efficiently',
-          questions: 6,
-          expires: 'Nov 5, 2017',
-          cost: 125
-        }]}
-      >
-      </StudiesSubmit>
+      <Questions />
     )
   }
 }

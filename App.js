@@ -1,13 +1,29 @@
 import React from 'react';
-import { Platform, StatusBar, StyleSheet, View, Text, Image } from 'react-native';
+
+import { 
+  Platform, 
+  StatusBar, 
+  StyleSheet, 
+  View, Text, 
+  Image 
+} from 'react-native';
+
 import { AppLoading, Asset, Font } from 'expo';
 import { Ionicons } from '@expo/vector-icons';
-import HomeScreen from './screens/HomeScreen.js';
+import HomeScreen from './screens/LinksScreen.js';
 import RootNavigation from './navigation/RootNavigation';
+
+import {
+  StackNavigator,
+} from 'react-navigation';
 
 export default class App extends React.Component {
   state = {
     isLoadingComplete: false,
+  };
+
+  static navigationOptions = {
+    title: 'Home'
   };
 
   componentWillMount() {
