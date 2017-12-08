@@ -55,9 +55,11 @@ export default class Questions extends Component {
             fontFamily:  'poppins-black' ,
             marginBottom: 16,
           }}>
-          Managing tax clientele efficiently
+          {this.props.study.title}
         </Text>
-        <Question />
+        {this.props.study.questions.map((question, index)=>{
+          return (<Question question={question} key={index}/>);
+        })}
         </ScrollView>
       </View>
     )

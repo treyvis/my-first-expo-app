@@ -26,12 +26,6 @@ export default class App extends React.Component {
     title: 'Home'
   };
 
-  componentWillMount() {
-    Font.loadAsync({
-      'poppins-black': require('./assets/fonts/Poppins-Bold.ttf'),
-    });
-  }
-
   render() {
     if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
       return (
@@ -102,6 +96,7 @@ export default class App extends React.Component {
         // We include SpaceMono because we use it in HomeScreen.js. Feel free
         // to remove this if you are not using it in your app
         'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
+        'poppins-black': require('./assets/fonts/Poppins-Bold.ttf'),
       }),
     ]);
   };

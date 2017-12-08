@@ -20,7 +20,15 @@ export default class LinksScreen extends React.Component {
 
   render() {
     return (
-      <Questions />
+      <Questions study={{
+        title: 'Managing tax clientele efficiently',
+        questions: [
+          'How do you manage your active clientele today?',
+          'How do you track realization and billable hours?',
+          'How do you currenlty track work for you cleints?',
+          'How do you communicate billable hours to your client?'
+        ]
+      }}/>
     )
   }
 }

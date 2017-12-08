@@ -75,7 +75,7 @@ export default class Question extends Component {
               fontFamily: 'poppins-black',
               lineHeight: 28,
             }}>
-            How do you manage your active clientele?
+            {this.props.question}
           </Text>
         </View>
       </View>
